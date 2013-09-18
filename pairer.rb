@@ -1,91 +1,22 @@
 #!/usr/bin/env ruby
-require 'rgl/adjacency'
 require 'yaml'
-require 'debugger'
-
-class WeightedUnDirectedGraph < RGL::AdjacencyGraph
-  def initialize(edgelist_class = Set, *other_graphs)
-    super
-    @weights = {}
-  end
-
-  def self.[] (*a)
-    result = new
-    0.step(a.size-2, 3) { |i| result.add_edge(a[i], a[i+1], a[i+2]) }
-    result
-  end
-
-  def to_s
-    (edges.sort_by {|e| e.to_s} +
-     isolates.sort_by {|n| n.to_s}).map { |e| e.to_s }.join("\n")
-  end
-
-  def isolates
-    edges.inject(Set.new(vertices)) { |iso, e| iso -= [e.source, e.target] }
-  end
-
-  def add_edge(u, v, w)
-    super(u,v)
-    @weights[[u,v]] = w
-  end
-
-  def weight(u, v)
-    @weights[[u,v]]
-  end
-
-  def remove_edge(u, v)
-    super
-    @weights.delete([u,v])
-  end
-
-  def remove_vertex(v)
-    super
-    @weights.delete_if { |k, _| k.include?(v) }
-  end
-
-  def edge_class
-    WeightedUnDirectedEdge
-  end
-
-  def edges
-    result = []
-    c = edge_class
-    each_edge { |u,v| result << c.new(u, v, self) }
-    result
-  end
-
-  def top_edge
-    key = @weights.select {|k, v| v == @weights.values.max }.keys.sample
-    [key, @weights[key]]
-  end
-end
-
-class WeightedUnDirectedEdge < RGL::Edge::UnDirectedEdge
-  def initialize(a, b, g)
-    super(a,b)
-    @graph = g
-  end
-
-  def weight
-    @graph.weight(source, target)
-  end
-
-   def to_s
-     "(#{source}-#{weight}-#{target})"
-   end
-end
+require './weighted_undirected_graph.rb'
 
 class Pod < WeightedUnDirectedGraph
-  attr_accessor :students, :previous_pairs
+  attr_accessor :students, :pair_log
 
-  def self.init_with_students(students, previous_pairs = {})
+  # need this initializer because the super duper initializer
+  # takes specific arguments
+  # _students_ is an array of the students github handles
+  # _pair_log_ is a hash in format { ["student1", "student2"] => weight }
+  def self.init_with_options(students, pair_log = {})
     p = Pod.new
     p.students = students
-    p.previous_pairs = previous_pairs
+    p.pair_log = pair_log
     p
   end
 
-  def remove_top_pair
+  def pop
     e = top_edge
     remove_edge(*e[0])
     remove_vertex(e[0][0])
@@ -93,14 +24,22 @@ class Pod < WeightedUnDirectedGraph
     e
   end
 
-  def gen_day
+  def build_graph
+    # latest edge weights from `pair_value`
     self.students.combination(2).each do |pair|
       add_edge(*pair.sort, pair_value(pair))
     end
+  end
+
+  def pair_students
+    # every time students are paired, rebuild the graph with the
+    build_graph
 
     pairs = []
     until pairs.length == students.length / 2
-      pairs << self.remove_top_pair
+      # randomly selects a pair from the pairs with the highest edge weight
+      # this is still not perfect.
+      pairs << self.pop
     end
 
     adjusted_weight_edges = pairs.map do |p|
@@ -109,19 +48,22 @@ class Pod < WeightedUnDirectedGraph
       x
     end
 
-    self.previous_pairs.merge!(Hash[*adjusted_weight_edges.flatten(1)])
+    update_pair_log adjusted_weight_edges
     pairs
   end
 
+  def update_pair_log adjusted_weights
+    self.pair_log.merge!(Hash[*adjusted_weights.flatten(1)])
+  end
+
   def pair_value(pair)
-    if self.previous_pairs.keys.include?(pair)
-      self.previous_pairs[pair]
+    if self.pair_log.keys.include?(pair)
+      self.pair_log[pair]
     else
       100
     end
   end
 end
-
 
 if ARGV[0]
   students_filename = ARGV[0]
@@ -144,15 +86,11 @@ end
 pair_log_filename ||= "pair_log"
 
 students = File.readlines(students_filename).map(&:chomp)
-g = Pod.init_with_students(students, pair_log)
+pod = Pod.init_with_options(students, pair_log)
 
 File.open("pairs_for_#{ students_filename }_#{Time.new.to_i.to_s}", "w") do |f|
-  day_pairs = g.gen_day
-  p Hash[*day_pairs.flatten(1)].keys
+  day_pairs = pod.pair_students
   f.puts Hash[Hash[*day_pairs.flatten(1)].keys]
 end
 
-File.open(pair_log_filename, "w") do |f|
-  f.puts g.previous_pairs.to_yaml
-end
-
+File.open(pair_log_filename, "w") { |f| f.puts pod.pair_log.to_yaml }
