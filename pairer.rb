@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'yaml'
+require 'fileutils'
 require './weighted_undirected_graph.rb'
 
 class Pod < WeightedUnDirectedGraph
@@ -79,6 +80,7 @@ if ARGV[1]
   pair_log = YAML.load_file(pair_log_filename)
 else
   if File.exist?("pair_log")
+    FileUtils.cp("pair_log", "pair_log#{Time.new.to_i}")
     pair_log = YAML.load_file("pair_log")
   end
 end
@@ -88,7 +90,7 @@ pair_log_filename ||= "pair_log"
 students = File.readlines(students_filename).map(&:chomp)
 pod = Pod.init_with_options(students, pair_log)
 
-File.open("pairs_for_#{ students_filename }_#{Time.new.to_i.to_s}", "w") do |f|
+File.open("pairs_for_#{ students_filename }_#{Time.new.to_i}", "w") do |f|
   day_pairs = pod.pair_students
   f.puts Hash[Hash[*day_pairs.flatten(1)].keys]
 end
