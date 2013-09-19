@@ -1,3 +1,33 @@
-{"lcevans"=>"nholland94", "benhass"=>"zackmdavis", "rachelhay"=>"yhengkang", "Valcrist77"=>"jhamon", "jdfoster4"=>"mclaros", "JosephBrianChambers"=>"kchandrasekera", "clausti"=>"craftjk", "NavyAnt24"=>"catalectic", "Nejuf"=>"micahbf", "aj-gregory"=>"jeffnv", "NatashaHull"=>"angelachang"}
-{"BitPuncher"=>"newtonry", "acflewis"=>"zmansiv", "briankwon21"=>"yuhuilin", "adoseofjess"=>"wanab33ninja", "Aaronik"=>"eudinaesis", "Doonsles"=>"eneriberri", "imurchie"=>"kwonsjay", "kkslider"=>"kyungmin"}
-{"guillewu"=>"jsinghdreams", "amtrakcn"=>"tnd23", "Zehhu"=>"vpark", "bwarkee"=>"izhou", "jsrosen3"=>"oddalot", "djquan"=>"giant-squid", "aarnwri"=>"dyang12", "RussHR"=>"justalisteningman", "atseng3"=>"persamina"}
+POD1
+{"lcevans"=>"nholland94",
+"benhass"=>"zackmdavis",
+"rachelhay"=>"yhengkang",
+"Valcrist77"=>"Nejuf",
+"jdfoster4"=>"mclaros",
+"JosephBrianChambers"=>"kchandrasekera",
+"clausti"=>"craftjk",
+"NavyAnt24"=>"catalectic",
+"jhamon"=>"micahbf",
+"aj-gregory"=>"jeffnv",
+"NatashaHull"=>"angelachang"}
+
+POD2
+{"BitPuncher"=>"newtonry",
+"acflewis"=>"zmansiv",
+"briankwon21"=>"yuhuilin",
+"adoseofjess"=>"wanab33ninja",
+"Aaronik"=>"eudinaesis",
+"Doonsles"=>"eneriberri",
+"imurchie"=>"kwonsjay",
+"kkslider"=>"kyungmin"}
+
+POD3
+{"guillewu"=>"jsinghdreams",
+"amtrakcn"=>"tnd23",
+"Zehhu"=>"vpark",
+"bwarkee"=>"izhou",
+"jsrosen3"=>"oddalot",
+"djquan"=>"giant-squid",
+"aarnwri"=>"dyang12",
+"RussHR"=>"justalisteningman",
+"atseng3"=>"persamina"}
