@@ -1,5 +1,17 @@
 # Pairer
 
+## Edge Weights
+The class starts out as a fully connected undirected weighted graph. Each node represents a student and each edge holds a value that will determine if they are paired or not. The data is persisted to a yaml file called `pair_log` that is loaded each day and run to create the pairs for the day.
+
+pairs are stored like this:
+
+? - justalisteningman
+  - giant-squid
+: 50
+
+If students are not in this list they will be given a default edge weight of 100. Everytime students are paired the weight is naturally halved. Pairing values can be adjusted according to how TA's feel students will pair together.
+
+
 ## RGL
 
 Pairer uses `rgl` (Ruby Graph Library).
