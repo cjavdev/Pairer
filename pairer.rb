@@ -2,6 +2,7 @@
 require 'yaml'
 require 'fileutils'
 require './weighted_undirected_graph.rb'
+require 'debugger'
 
 class Pod < WeightedUnDirectedGraph
   attr_accessor :students, :pair_log
@@ -33,6 +34,37 @@ class Pod < WeightedUnDirectedGraph
   end
 
   def pair_students
+    pod_copy = self.dup
+
+    pairings = []
+    50.times do |t|
+      pairings << pod_copy.pair_students!
+    end
+
+    pairing_scores = Hash.new(0)
+    pairings.each do |pairing|
+      pairing.each do |pair|
+        pairing_scores[pairing] += pair[1]
+      end
+    end
+
+    debugger
+
+    # this gets the key (a.k.a pairing) for the highest pairing
+    pairs = pairing_scores.sort_by { |_, v| -v }.first[0]
+
+    debugger
+    adjusted_weight_edges = pairs.map do |p|
+      x = p.clone
+      x[1] = x[1]/2 # could be average pair weighting
+      x
+    end
+
+    update_pair_log adjusted_weight_edges
+    pairs
+  end
+
+  def pair_students!
     # every time students are paired, rebuild the graph with the
     build_graph
 
