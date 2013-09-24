@@ -48,12 +48,9 @@ class Pod < WeightedUnDirectedGraph
       end
     end
 
-    debugger
-
     # this gets the key (a.k.a pairing) for the highest pairing
     pairs = pairing_scores.sort_by { |_, v| -v }.first[0]
 
-    debugger
     adjusted_weight_edges = pairs.map do |p|
       x = p.clone
       x[1] = x[1]/2 # could be average pair weighting
@@ -119,12 +116,17 @@ end
 
 pair_log_filename ||= "pair_log"
 
+names_to_handles = YAML.load_file("names_and_handles")
+
 students = File.readlines(students_filename).map(&:chomp)
 pod = Pod.init_with_options(students, pair_log)
 
 File.open("pairs_for_#{ students_filename }_#{Time.new.to_i}", "w") do |f|
   day_pairs = pod.pair_students
-  f.puts Hash[Hash[*day_pairs.flatten(1)].keys]
+  Hash[*day_pairs.flatten(1)].keys
+      .map { |pr| [names_to_handles[pr[0]], names_to_handles[pr[1]]] }
+      .each {|pr| f.puts pr.inspect }
+  #f.puts Hash[Hash[*day_pairs.flatten(1)].keys]
 end
 
 File.open(pair_log_filename, "w") { |f| f.puts pod.pair_log.to_yaml }

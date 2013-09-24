@@ -76,7 +76,7 @@
 : 50
 ? - guillewu
   - vpark
-: 25
+: 50
 ? - izhou
   - aarnwri
 : 50
@@ -238,10 +238,10 @@
 : 50
 ? - RussHR
   - amtrakcn
-: 3
+: 50
 ? - giant-squid
   - tnd23
-: 25
+: 50
 ? - izhou
   - persamina
 : 50
@@ -313,13 +313,13 @@
 : 50
 ? - amtrakcn
   - tnd23
-: 25
+: 50
 ? - Zehhu
   - vpark
-: 25
+: 50
 ? - bwarkee
   - izhou
-: 25
+: 50
 ? - jsrosen3
   - oddalot
 : 50
@@ -400,13 +400,13 @@
 : 50
 ? - atseng3
   - tnd23
-: 25
+: 50
 ? - RussHR
   - jsrosen3
 : 50
 ? - giant-squid
   - vpark
-: 12
+: 50
 ? - aarnwri
   - bwarkee
 : 50
@@ -415,13 +415,13 @@
 : 50
 ? - dyang12
   - izhou
-: 12
+: 50
 ? - oddalot
   - persamina
 : 50
 ? - RussHR
   - dyang12
-: 25
+: 50
 ? - atseng3
   - vpark
 : 25
@@ -457,10 +457,10 @@
 : 50
 ? - atseng3
   - guillewu
-: 25
+: 50
 ? - izhou
   - vpark
-: 25
+: 50
 ? - aarnwri
   - Zehhu
 : 50
@@ -517,7 +517,7 @@
 : 25
 ? - amtrakcn
   - dyang12
-: 25
+: 50
 ? - bwarkee
   - justalisteningman
 : 50
@@ -529,7 +529,7 @@
 : 50
 ? - guillewu
   - tnd23
-: 6
+: 50
 ? - eudinaesis
   - kkslider
 : 50
@@ -1277,306 +1277,3 @@
 ? - wanab33ninja
   - zmansiv
 : 25
-? - izhou
-  - justalisteningman
-: 50
-? - dyang12
-  - vpark
-: 50
-? - jsinghdreams
-  - persamina
-: 50
-? - RussHR
-  - bwarkee
-: 50
-? - aarnwri
-  - oddalot
-: 50
-? - amtrakcn
-  - guillewu
-: 50
-? - Zehhu
-  - atseng3
-: 50
-? - djquan
-  - tnd23
-: 50
-? - atseng3
-  - giant-squid
-: 50
-? - RussHR
-  - izhou
-: 6
-? - amtrakcn
-  - persamina
-: 50
-? - bwarkee
-  - tnd23
-: 25
-? - Zehhu
-  - dyang12
-: 50
-? - djquan
-  - justalisteningman
-: 50
-? - guillewu
-  - jsrosen3
-: 50
-? - jsinghdreams
-  - vpark
-: 50
-? - amtrakcn
-  - izhou
-: 12
-? - bwarkee
-  - oddalot
-: 50
-? - guillewu
-  - persamina
-: 50
-? - RussHR
-  - giant-squid
-: 12
-? - djquan
-  - vpark
-: 50
-? - dyang12
-  - tnd23
-: 25
-? - aarnwri
-  - atseng3
-: 50
-? - jsrosen3
-  - vpark
-: 50
-? - aarnwri
-  - guillewu
-: 50
-? - izhou
-  - tnd23
-: 25
-? - Zehhu
-  - jsinghdreams
-: 50
-? - atseng3
-  - djquan
-: 50
-? - justalisteningman
-  - persamina
-: 50
-? - giant-squid
-  - justalisteningman
-: 50
-? - bwarkee
-  - jsinghdreams
-: 50
-? - djquan
-  - jsrosen3
-: 50
-? - guillewu
-  - izhou
-: 50
-? - aarnwri
-  - amtrakcn
-: 50
-? - RussHR
-  - vpark
-: 3
-? - jsinghdreams
-  - oddalot
-: 50
-? - bwarkee
-  - dyang12
-: 50
-? - Zehhu
-  - giant-squid
-: 50
-? - izhou
-  - jsrosen3
-: 50
-? - atseng3
-  - justalisteningman
-: 50
-? - tnd23
-  - vpark
-: 25
-? - dyang12
-  - guillewu
-: 50
-? - giant-squid
-  - oddalot
-: 50
-? - RussHR
-  - tnd23
-: 6
-? - bwarkee
-  - vpark
-: 25
-? - persamina
-  - vpark
-: 50
-? - Zehhu
-  - guillewu
-: 25
-? - RussHR
-  - atseng3
-: 25
-? - dyang12
-  - jsrosen3
-: 50
-? - aarnwri
-  - tnd23
-: 50
-? - dyang12
-  - jsinghdreams
-: 50
-? - amtrakcn
-  - vpark
-: 25
-? - RussHR
-  - aarnwri
-: 25
-? - justalisteningman
-  - tnd23
-: 50
-? - atseng3
-  - izhou
-: 12
-? - RussHR
-  - guillewu
-: 12
-? - Zehhu
-  - bwarkee
-: 50
-? - djquan
-  - dyang12
-: 50
-? - oddalot
-  - tnd23
-: 50
-? - aarnwri
-  - djquan
-: 50
-? - izhou
-  - jsinghdreams
-: 50
-? - dyang12
-  - justalisteningman
-: 50
-? - oddalot
-  - vpark
-: 50
-? - RussHR
-  - Zehhu
-: 25
-? - Zehhu
-  - djquan
-: 50
-? - justalisteningman
-  - oddalot
-: 50
-? - giant-squid
-  - izhou
-: 25
-? - amtrakcn
-  - giant-squid
-: 25
-? - jsrosen3
-  - tnd23
-: 50
-? - bwarkee
-  - djquan
-: 50
-? - jsrosen3
-  - persamina
-: 50
-? - atseng3
-  - bwarkee
-: 50
-? - guillewu
-  - justalisteningman
-: 50
-? - giant-squid
-  - jsinghdreams
-: 50
-? - aarnwri
-  - persamina
-: 50
-? - atseng3
-  - jsrosen3
-: 50
-? - Zehhu
-  - amtrakcn
-: 50
-? - bwarkee
-  - persamina
-: 50
-? - RussHR
-  - jsinghdreams
-: 50
-? - amtrakcn
-  - bwarkee
-: 25
-? - aarnwri
-  - jsrosen3
-: 50
-? - giant-squid
-  - guillewu
-: 25
-? - djquan
-  - persamina
-: 50
-? - jsinghdreams
-  - tnd23
-: 50
-? - Zehhu
-  - izhou
-: 50
-? - aarnwri
-  - giant-squid
-: 50
-? - amtrakcn
-  - atseng3
-: 50
-? - guillewu
-  - oddalot
-: 50
-? - aarnwri
-  - izhou
-: 50
-? - amtrakcn
-  - jsinghdreams
-: 50
-? - atseng3
-  - dyang12
-: 50
-? - aarnwri
-  - vpark
-: 50
-? - bwarkee
-  - guillewu
-: 50
-? - jsinghdreams
-  - justalisteningman
-: 50
-? - dyang12
-  - giant-squid
-: 50
-? - amtrakcn
-  - justalisteningman
-: 50
-? - giant-squid
-  - persamina
-: 50
-? - Zehhu
-  - jsrosen3
-: 50
-? - djquan
-  - oddalot
-: 50
-? - RussHR
-  - persamina
-: 25
-? - atseng3
-  - oddalot
-: 50

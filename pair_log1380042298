@@ -82,7 +82,7 @@
 : 50
 ? - Zehhu
   - tnd23
-: 50
+: 25
 ? - catalectic
   - yhengkang
 : 50
@@ -232,13 +232,13 @@
 : 50
 ? - Zehhu
   - aarnwri
-: 50
+: 25
 ? - justalisteningman
   - vpark
-: 50
+: 25
 ? - RussHR
   - amtrakcn
-: 3
+: 0
 ? - giant-squid
   - tnd23
 : 25
@@ -319,7 +319,7 @@
 : 25
 ? - bwarkee
   - izhou
-: 25
+: 1
 ? - jsrosen3
   - oddalot
 : 50
@@ -331,7 +331,7 @@
 : 50
 ? - RussHR
   - justalisteningman
-: 50
+: 0
 ? - atseng3
   - persamina
 : 50
@@ -415,13 +415,13 @@
 : 50
 ? - dyang12
   - izhou
-: 12
+: 0
 ? - oddalot
   - persamina
 : 50
 ? - RussHR
   - dyang12
-: 25
+: 0
 ? - atseng3
   - vpark
 : 25
@@ -457,7 +457,7 @@
 : 50
 ? - atseng3
   - guillewu
-: 25
+: 1
 ? - izhou
   - vpark
 : 25
@@ -517,7 +517,7 @@
 : 25
 ? - amtrakcn
   - dyang12
-: 25
+: 0
 ? - bwarkee
   - justalisteningman
 : 50
@@ -1282,31 +1282,31 @@
 : 50
 ? - dyang12
   - vpark
-: 50
+: 12
 ? - jsinghdreams
   - persamina
 : 50
 ? - RussHR
   - bwarkee
-: 50
+: 0
 ? - aarnwri
   - oddalot
 : 50
 ? - amtrakcn
   - guillewu
-: 50
+: 0
 ? - Zehhu
   - atseng3
 : 50
 ? - djquan
   - tnd23
-: 50
+: 25
 ? - atseng3
   - giant-squid
 : 50
 ? - RussHR
   - izhou
-: 6
+: 0
 ? - amtrakcn
   - persamina
 : 50
@@ -1315,7 +1315,7 @@
 : 25
 ? - Zehhu
   - dyang12
-: 50
+: 12
 ? - djquan
   - justalisteningman
 : 50
@@ -1324,10 +1324,10 @@
 : 50
 ? - jsinghdreams
   - vpark
-: 50
+: 25
 ? - amtrakcn
   - izhou
-: 12
+: 0
 ? - bwarkee
   - oddalot
 : 50
@@ -1336,7 +1336,7 @@
 : 50
 ? - RussHR
   - giant-squid
-: 12
+: 0
 ? - djquan
   - vpark
 : 50
@@ -1351,10 +1351,10 @@
 : 50
 ? - aarnwri
   - guillewu
-: 50
+: 6
 ? - izhou
   - tnd23
-: 25
+: 12
 ? - Zehhu
   - jsinghdreams
 : 50
@@ -1366,7 +1366,7 @@
 : 50
 ? - giant-squid
   - justalisteningman
-: 50
+: 25
 ? - bwarkee
   - jsinghdreams
 : 50
@@ -1375,19 +1375,19 @@
 : 50
 ? - guillewu
   - izhou
-: 50
+: 1
 ? - aarnwri
   - amtrakcn
 : 50
 ? - RussHR
   - vpark
-: 3
+: 0
 ? - jsinghdreams
   - oddalot
 : 50
 ? - bwarkee
   - dyang12
-: 50
+: 1
 ? - Zehhu
   - giant-squid
 : 50
@@ -1396,7 +1396,7 @@
 : 50
 ? - atseng3
   - justalisteningman
-: 50
+: 25
 ? - tnd23
   - vpark
 : 25
@@ -1408,46 +1408,46 @@
 : 50
 ? - RussHR
   - tnd23
-: 6
+: 0
 ? - bwarkee
   - vpark
 : 25
 ? - persamina
   - vpark
-: 50
+: 25
 ? - Zehhu
   - guillewu
 : 25
 ? - RussHR
   - atseng3
-: 25
+: 0
 ? - dyang12
   - jsrosen3
 : 50
 ? - aarnwri
   - tnd23
-: 50
+: 25
 ? - dyang12
   - jsinghdreams
 : 50
 ? - amtrakcn
   - vpark
-: 25
+: 12
 ? - RussHR
   - aarnwri
-: 25
+: 0
 ? - justalisteningman
   - tnd23
-: 50
+: 25
 ? - atseng3
   - izhou
-: 12
+: 3
 ? - RussHR
   - guillewu
-: 12
+: 0
 ? - Zehhu
   - bwarkee
-: 50
+: 6
 ? - djquan
   - dyang12
 : 50
@@ -1468,7 +1468,7 @@
 : 50
 ? - RussHR
   - Zehhu
-: 25
+: 3
 ? - Zehhu
   - djquan
 : 50
@@ -1477,10 +1477,10 @@
 : 50
 ? - giant-squid
   - izhou
-: 25
+: 1
 ? - amtrakcn
   - giant-squid
-: 25
+: 12
 ? - jsrosen3
   - tnd23
 : 50
@@ -1492,7 +1492,7 @@
 : 50
 ? - atseng3
   - bwarkee
-: 50
+: 6
 ? - guillewu
   - justalisteningman
 : 50
@@ -1516,46 +1516,46 @@
 : 50
 ? - amtrakcn
   - bwarkee
-: 25
+: 0
 ? - aarnwri
   - jsrosen3
 : 50
 ? - giant-squid
   - guillewu
-: 25
+: 6
 ? - djquan
   - persamina
 : 50
 ? - jsinghdreams
   - tnd23
-: 50
+: 25
 ? - Zehhu
   - izhou
-: 50
+: 3
 ? - aarnwri
   - giant-squid
 : 50
 ? - amtrakcn
   - atseng3
-: 50
+: 6
 ? - guillewu
   - oddalot
 : 50
 ? - aarnwri
   - izhou
-: 50
+: 12
 ? - amtrakcn
   - jsinghdreams
 : 50
 ? - atseng3
   - dyang12
-: 50
+: 6
 ? - aarnwri
   - vpark
-: 50
+: 25
 ? - bwarkee
   - guillewu
-: 50
+: 12
 ? - jsinghdreams
   - justalisteningman
 : 50
@@ -1564,7 +1564,7 @@
 : 50
 ? - amtrakcn
   - justalisteningman
-: 50
+: 25
 ? - giant-squid
   - persamina
 : 50
