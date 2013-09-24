@@ -5,9 +5,11 @@ The class starts out as a fully connected undirected weighted graph. Each node r
 
 pairs are stored like this:
 
+```yaml
 ? - justalisteningman
   - giant-squid
 : 50
+```
 
 If students are not in this list they will be given a default edge weight of 100. Everytime students are paired the weight is naturally halved. Pairing values can be adjusted according to how TA's feel students will pair together.
 
