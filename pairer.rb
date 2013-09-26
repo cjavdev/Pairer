@@ -110,7 +110,16 @@ if ARGV[1]
 else
   if File.exist?("pair_log")
     FileUtils.cp("pair_log", "pair_log#{Time.new.to_i}")
-    pair_log = YAML.load_file("pair_log")
+    temp_pair_log = YAML.load_file("pair_log")
+    pair_log = {}
+    temp_pair_log.keys.each do |key|
+      pair_log[key.sort] = temp_pair_log[key]
+      if key.sort != key
+        puts "difference found!"
+        p key
+        p key.sort
+      end
+    end
   end
 end
 
