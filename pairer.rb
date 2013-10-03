@@ -29,8 +29,12 @@ class Pod < WeightedUnDirectedGraph
   def build_graph
     # latest edge weights from `pair_value`
     self.students.combination(2).each do |pair|
-      add_edge(*pair.sort, pair_value(pair))
+      add_edge(*pair.sort, pair_value(pair.sort))
     end
+  end
+
+  def dup
+    Pod.init_with_options(@students.dup, @pair_log.dup)
   end
 
   def pair_students
@@ -38,7 +42,7 @@ class Pod < WeightedUnDirectedGraph
 
     pairings = []
     50.times do |t|
-      pairings << pod_copy.pair_students!
+      pairings << pod_copy.dup.pair_students!
     end
 
     pairing_scores = Hash.new(0)
