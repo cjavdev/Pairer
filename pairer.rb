@@ -109,20 +109,19 @@ end
 pair_log = {}
 
 if ARGV[1]
-  pair_log_filename = ARGV[1]
-  pair_log = YAML.load_file(pair_log_filename)
-else
-  if File.exist?("pair_log")
-    FileUtils.cp("pair_log", "pair_log#{Time.new.to_i}")
-    temp_pair_log = YAML.load_file("pair_log")
-    pair_log = {}
-    temp_pair_log.keys.each do |key|
-      pair_log[key.sort] = temp_pair_log[key]
-      if key.sort != key
-        puts "difference found!"
-        p key
-        p key.sort
-      end
+  week_day_filename = ARGV[1]
+end
+
+if File.exist?("pair_log")
+  FileUtils.cp("pair_log", "pair_log#{Time.new.to_i}")
+  temp_pair_log = YAML.load_file("pair_log")
+  pair_log = {}
+  temp_pair_log.keys.each do |key|
+    pair_log[key.sort] = temp_pair_log[key]
+    if key.sort != key
+      puts "difference found!"
+      p key
+      p key.sort
     end
   end
 end
@@ -133,13 +132,14 @@ names_to_handles = YAML.load_file("names_and_handles")
 
 students = File.readlines(students_filename).map(&:chomp)
 pod = Pod.init_with_options(students, pair_log)
-
-File.open("pairs_for_#{ students_filename }_#{Time.new.to_i}", "w") do |f|
+timestamp = Time.new.to_i
+File.open("pairs_for_#{ students_filename }_#{ timestamp }", "w") do |f|
   day_pairs = pod.pair_students
   Hash[*day_pairs.flatten(1)].keys
       .map { |pr| [names_to_handles[pr[0]], names_to_handles[pr[1]]] }
       .each {|pr| f.puts pr.inspect }
   #f.puts Hash[Hash[*day_pairs.flatten(1)].keys]
 end
+`cp pairs_for_#{ students_filename}_#{ timestamp } #{ week_day_filename }`
 
 File.open(pair_log_filename, "w") { |f| f.puts pod.pair_log.to_yaml }
